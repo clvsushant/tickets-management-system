@@ -1,0 +1,26 @@
+{
+  "name": "tickets-management-system",
+  "version": "1.0.0",
+  "description": "A ticket management server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jasmine"
+  },
+  "author": "Sushant Singh",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.2",
+    "joi": "^17.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "sequelize": "^6.14.0",
+    "sqlite3": "^5.0.2",
+    "swagger-ui-express": "^4.3.0",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "jasmine": "^4.0.2",
+    "supertest": "^6.2.2"
+  }
+}
