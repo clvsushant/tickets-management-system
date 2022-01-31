@@ -27,16 +27,26 @@ Content-Type: application/json
 
 {
   "user": {
+    "email": "mailme1@gmail.com",
+    "password": "Password1"
+  }
+}
+###
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+  "user": {
     "email": "mailme2@gmail.com",
     "password": "Password2"
   }
 }
 ###
 GET http://localhost:3000/users/
-Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiOTAzMTc1MDYtZDYwZi00YzVhLThjMWYtMzY4Mzc0YjA1ODA0IiwiZW1haWwiOiJtYWlsbWUyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFNJeFBSVTF3Uk12S0pDVmZNNU1WR3VYbXRneWpVZE9GcnJjanAwWUIxSGRxc0hQY0NlOE1pIiwibmFtZSI6IlRlc3QgVXNlcjIiLCJ0b2tlbiI6ImV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUoxYzJWeUlqcDdJbWxrSWpvaU9UQXpNVGMxTURZdFpEWXdaaTAwWXpWaExUaGpNV1l0TXpZNE16YzBZakExT0RBMElpd2laVzFoYVd3aU9pSnRZV2xzYldVeVFHZHRZV2xzTG1OdmJTSXNJbkJoYzNOM2IzSmtJam9pSkRKaUpERXdKRk5KZUZCU1ZURjNVazEyUzBwRFZtWk5OVTFXUjNWWWJYUm5lV3BWWkU5R2NuSmphbkF3V1VJeFNHUnhjMGhRWTBObE9FMXBJaXdpYm1GdFpTSTZJbFJsYzNRZ1ZYTmxjaklpTENKMWNHUmhkR1ZrUVhRaU9pSXlNREl5TFRBeExUTXhWREEzT2pJeU9qSTBMamsxTlZvaUxDSmpjbVZoZEdWa1FYUWlPaUl5TURJeUxUQXhMVE14VkRBM09qSXlPakkwTGprMU5Wb2lmU3dpYVdGMElqb3hOalF6TmpFek56UTBmUS5iOWh5YVl5cHVsU3BtUEZVZ0R4UFZxb29RRHA5S05wRXB1OVItbmNITkJNIiwiY3JlYXRlZEF0IjoiMjAyMi0wMS0zMVQwNzoyMjoyNC45NTVaIiwidXBkYXRlZEF0IjoiMjAyMi0wMS0zMVQwNzoyMjoyNC45NjZaIn0sImlhdCI6MTY0MzYxMzc3NH0.L__R9F935HN1cheNw6Jic8Tf5Nr4tbwuR7_5O9iKDao
+Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiZDI0ZGFhMzEtZGEzYy00ZGZkLTliZmItOWEwNDc3OTBjOWRmIiwiZW1haWwiOiJtYWlsbWUyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHRicEs5Q3RHLmw5dXRzTmprbExja2VtVDYvRmxBVHlsdi5CaTFMQm03MTl4VDJ6VjhsSm1pIiwibmFtZSI6IlRlc3QgVXNlcjIiLCJ1cGRhdGVkQXQiOiIyMDIyLTAxLTMxVDA5OjM4OjAwLjkyOVoiLCJjcmVhdGVkQXQiOiIyMDIyLTAxLTMxVDA5OjM4OjAwLjkyOVoifSwiaWF0IjoxNjQzNjIxODgwfQ.8_cSMpn3uKrD1nzXT5szWfiqKh3601iIzbC9TVQJX-o
 ###
 POST http://localhost:3000/tickets/
-Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiYzY3N2JmZWQtZjdiOC00YjVjLWI0ZGEtOGRlZmQ1MGI3YWVlIiwiZW1haWwiOiJtYWlsbWUxQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGwuUS5ZMjZsdUtHU3U1WjRTSXNveE8uREkwZlFZMDd0T0NRQTVkREdBYi9yUWFLRVQ1LjBxIiwibmFtZSI6IlRlc3QgVXNlcjEiLCJ1cGRhdGVkQXQiOiIyMDIyLTAxLTMxVDA3OjIxOjM0LjUzOVoiLCJjcmVhdGVkQXQiOiIyMDIyLTAxLTMxVDA3OjIxOjM0LjUzOVoifSwiaWF0IjoxNjQzNjEzNjk0fQ.2Tjmd_1AdPFJTtcFSH04ExIS5mEJA3Lz-IwxMxyZmwI
+Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiZDI0ZGFhMzEtZGEzYy00ZGZkLTliZmItOWEwNDc3OTBjOWRmIiwiZW1haWwiOiJtYWlsbWUyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHRicEs5Q3RHLmw5dXRzTmprbExja2VtVDYvRmxBVHlsdi5CaTFMQm03MTl4VDJ6VjhsSm1pIiwibmFtZSI6IlRlc3QgVXNlcjIiLCJ1cGRhdGVkQXQiOiIyMDIyLTAxLTMxVDA5OjM4OjAwLjkyOVoiLCJjcmVhdGVkQXQiOiIyMDIyLTAxLTMxVDA5OjM4OjAwLjkyOVoifSwiaWF0IjoxNjQzNjIxODgwfQ.8_cSMpn3uKrD1nzXT5szWfiqKh3601iIzbC9TVQJX-o
 
 Content-Type: application/json
 {
@@ -45,6 +55,6 @@ Content-Type: application/json
         "subcategory": "requestAllocation",
         "title": "Allocate Sample Asset",
         "description": "Need sample asset for productive work",
-        "assignedTo": "90317506-d60f-4c5a-8c1f-368374b05804"
+        "assignedTo": "a179d357-3234-43ad-984e-594f82895fd8"
     }
 }

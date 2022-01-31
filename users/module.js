@@ -32,7 +32,8 @@ exports.loginUser = async (userPayload) => {
     userPayload.password
   );
   if (passMatch === false) throw new Error('wrong password');
-  existing.token = await sign(existing);
+
+  existing.token = await sign(await sanitizeFields(existing.dataValues));
   await existing.save();
   return existing.token;
 };
