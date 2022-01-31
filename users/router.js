@@ -1,6 +1,6 @@
 const { Router } = require('express');
-const { authByToken } = require('./jwt');
-const { createUser, loginUser, getUserByEmail } = require('./module');
+const { authByToken } = require('../utils/jwt');
+const { createUser, loginUser, getUserById } = require('./module');
 const route = Router();
 
 route.post('/login', async (req, res) => {
@@ -25,9 +25,9 @@ route.post('/', async (req, res) => {
   }
 });
 
-route.get('/', authByToken, async (req, res) => {
+route.get('/me', authByToken, async (req, res) => {
   try {
-    const user = await getUserByEmail(req.user.email);
+    const user = await getUserById(req.user.id);
     if (!user) throw new Error('No such user found');
     return res.status(200).json({ user });
   } catch (e) {

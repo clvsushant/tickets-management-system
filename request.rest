@@ -42,19 +42,6 @@ Content-Type: application/json
   }
 }
 ###
-GET http://localhost:3000/users/
-Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiZDI0ZGFhMzEtZGEzYy00ZGZkLTliZmItOWEwNDc3OTBjOWRmIiwiZW1haWwiOiJtYWlsbWUyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHRicEs5Q3RHLmw5dXRzTmprbExja2VtVDYvRmxBVHlsdi5CaTFMQm03MTl4VDJ6VjhsSm1pIiwibmFtZSI6IlRlc3QgVXNlcjIiLCJ1cGRhdGVkQXQiOiIyMDIyLTAxLTMxVDA5OjM4OjAwLjkyOVoiLCJjcmVhdGVkQXQiOiIyMDIyLTAxLTMxVDA5OjM4OjAwLjkyOVoifSwiaWF0IjoxNjQzNjIxODgwfQ.8_cSMpn3uKrD1nzXT5szWfiqKh3601iIzbC9TVQJX-o
+GET http://localhost:3000/users/me/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNzU2MmIwODktZDA0Ny00MWFlLThkNDQtYTc5YWM1OTNhOWVmIiwiZW1haWwiOiJtYWlsbWUxQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGdZZThpQnlJbXl5ZEtRM1hRNkJ1T2VTcy4xdTdpc3NDSlFMTU5ORzVhaFFiTmxQU3BRLkRLIiwibmFtZSI6IlRlc3QgVXNlcjEiLCJ1cGRhdGVkQXQiOiIyMDIyLTAxLTMxVDEzOjMwOjIwLjU3NVoiLCJjcmVhdGVkQXQiOiIyMDIyLTAxLTMxVDEzOjMwOjIwLjU3NVoifSwiaWF0IjoxNjQzNjM1ODIwfQ.o4rJml0r9AvLMYXecUsGPdjkPKA99m3i9jv-kbfu4AU
 ###
-POST http://localhost:3000/tickets/
-Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiZDI0ZGFhMzEtZGEzYy00ZGZkLTliZmItOWEwNDc3OTBjOWRmIiwiZW1haWwiOiJtYWlsbWUyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHRicEs5Q3RHLmw5dXRzTmprbExja2VtVDYvRmxBVHlsdi5CaTFMQm03MTl4VDJ6VjhsSm1pIiwibmFtZSI6IlRlc3QgVXNlcjIiLCJ1cGRhdGVkQXQiOiIyMDIyLTAxLTMxVDA5OjM4OjAwLjkyOVoiLCJjcmVhdGVkQXQiOiIyMDIyLTAxLTMxVDA5OjM4OjAwLjkyOVoifSwiaWF0IjoxNjQzNjIxODgwfQ.8_cSMpn3uKrD1nzXT5szWfiqKh3601iIzbC9TVQJX-o
-
-Content-Type: application/json
-{
-    "ticket": {
-        "category": "asset",
-        "subcategory": "requestAllocation",
-        "title": "Allocate Sample Asset",
-        "description": "Need sample asset for productive work",
-        "assignedTo": "a179d357-3234-43ad-984e-594f82895fd8"
-    }
-}

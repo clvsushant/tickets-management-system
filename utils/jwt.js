@@ -18,7 +18,7 @@ exports.authByToken = async (req, res, next) => {
     });
 
   const authHead = authHeader.split(' ');
-  if (authHead[0] != 'Token')
+  if (authHead[0] != 'Bearer')
     return res.status(401).json({
       errors: { body: ['Authorization failed', 'Token missing'] },
     });

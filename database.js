@@ -29,9 +29,6 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  token: {
-    type: DataTypes.STRING,
-  },
 });
 
 const Ticket = sequelize.define('Ticket', {

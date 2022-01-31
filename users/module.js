@@ -1,11 +1,10 @@
-const { sign } = require('./jwt');
 const { User } = require('../database');
-const { hashPassword, matchPassword } = require('./password');
 const { createUserSchema, loginUserSchema } = require('./validation');
+const { hashPassword, matchPassword } = require('../utils/password');
+const { sign } = require('../utils/jwt');
 
 const sanitizeFields = async (user) => {
   if (user.password) delete user.password;
-  if (user.token) delete user.token;
   return user;
 };
 
@@ -18,9 +17,8 @@ exports.createUser = async (userPayload) => {
     password: await hashPassword(userPayload.password),
     name: userPayload.name,
   });
-  user.token = await sign(user);
-  await user.save();
-  return user.token;
+  const token = await sign(user);
+  return token;
 };
 
 exports.loginUser = async (userPayload) => {
@@ -33,13 +31,12 @@ exports.loginUser = async (userPayload) => {
   );
   if (passMatch === false) throw new Error('wrong password');
 
-  existing.token = await sign(await sanitizeFields(existing.dataValues));
-  await existing.save();
-  return existing.token;
+  const token = await sign(await sanitizeFields(existing.dataValues));
+  return token;
 };
 
-exports.getUserByEmail = async (userEmail) => {
-  const user = await User.findOne({ where: { email: userEmail } });
+exports.getUserById = async (userId) => {
+  const user = await User.findByPk(userId);
   if (!user) throw new Error('No user with this email');
   return sanitizeFields(user.dataValues);
 };
