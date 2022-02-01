@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const JWT_SECRET =
+  process.env.JWT_SECRET ||
   'ed87cdb87de0b0ab7f45ccd779df15e536b3477b8f683c6a70bf04ba223f0f106a8f76509d1221298b07ef3d0d7f4951a5ff9d30765966f80ec93a3a486960da'; //TODO: move sensitive things in separate config file
 
 exports.sign = async (user) => {

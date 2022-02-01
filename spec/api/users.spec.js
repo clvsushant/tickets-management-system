@@ -1,11 +1,16 @@
 const supertest = require('supertest');
 const app = require('../../app');
-const { connectToDB } = require('../../database');
+const { startServer, stopServer } = require('../utils/database');
 const request = supertest(app);
 
 describe('User tests', () => {
   beforeAll(async () => {
-    await connectToDB();
+    await startServer();
+    console.log(process.env.JWT_SECRET);
+    console.log(process.env.DB_NAME);
+  });
+  afterAll(async () => {
+    await stopServer();
   });
   it('should create user and validate it by email', async () => {
     const response1 = await request.post('/users').send({
