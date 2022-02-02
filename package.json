@@ -1,5 +1,5 @@
 {
-  "name": "tickets-management-system",
+  "name": "users-management-system",
   "version": "1.0.0",
   "description": "A ticket management server",
   "main": "index.js",
