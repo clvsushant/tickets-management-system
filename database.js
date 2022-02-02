@@ -1,8 +1,9 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
+const storage = process.env.DB_PATH || 'db.sqlite3';
 const sequelize = new Sequelize({
   dialect: 'sqlite',
-  storage: process.env.DB_NAME || 'db.sqlite3',
+  storage,
 });
 
 exports.User = sequelize.define('User', {

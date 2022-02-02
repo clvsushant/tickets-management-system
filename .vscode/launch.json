@@ -10,7 +10,9 @@
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
       "env": {
-        "PORT": "4000"
+        "PORT": "4000",
+        "JWT_SECRET": "ebbf7d908af98bc9c4d5daa907e32298130f8bf305270ec7727043a773aa89942a39ee0a464b0f42c0edee1bcafe66d50d27357f5922be419072cd30d218a264",
+        "DB_PATH": "users.sqlite3"
       },
       "program": "${workspaceFolder}/index.js",
       "test": "${workspaceFolder}/test.js"

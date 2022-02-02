@@ -1,6 +1,6 @@
 {
   "jasmineExplorer.env": {
     "JWT_SECRET": "e09915725816e652a6f1aa20acf682eb0b42ade0bbc6218435a618026d0b34829ce417eb03a972a41930680bdc14931a25f9c725804646ee94c653a9e7a34058",
-    "DB_NAME": "test.sqlite3"
+    "DB_PATH": "test.sqlite3"
   }
 }
