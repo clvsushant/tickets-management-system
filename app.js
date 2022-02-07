@@ -9,7 +9,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use('/users', require('./users/router'));
-app.use('/tickets', require('./tickets/router'));
 
 app.get('/', (req, res) => {
   res

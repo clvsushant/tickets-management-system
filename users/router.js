@@ -5,7 +5,7 @@ const route = Router();
 
 route.post('/login', async (req, res) => {
   try {
-    const token = await loginUser(req.body.user);
+    const token = await loginUser(req.body);
     return res.status(200).json({ token });
   } catch (e) {
     return res.status(422).json({
@@ -16,7 +16,7 @@ route.post('/login', async (req, res) => {
 
 route.post('/', async (req, res) => {
   try {
-    const token = await createUser(req.body.user);
+    const token = await createUser(req.body);
     return res.status(201).json({ token });
   } catch (e) {
     return res.status(422).json({
@@ -29,7 +29,7 @@ route.get('/me', authByToken, async (req, res) => {
   try {
     const user = await getUserById(req.user.id);
     if (!user) throw new Error('No such user found');
-    return res.status(200).json({ user });
+    return res.status(200).json(user);
   } catch (e) {
     return res.status(404).json({
       errors: { body: [e.message] },
