@@ -1,13 +1,10 @@
 const Joi = require('joi');
 
 exports.createUserSchema = Joi.object({
-  email: Joi.string()
-    .required()
-    .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } })
-    .messages({
-      'any.required': 'Email is required',
-      'string.email': 'Must be a valid email address',
-    }),
+  email: Joi.string().required().email().messages({
+    'any.required': 'Email is required',
+    'string.email': 'Must be a valid email address',
+  }),
   password: Joi.string().required().min(6).messages({
     'any.required': 'Password is required',
     'string.min': 'Minimum 6 characters required',
