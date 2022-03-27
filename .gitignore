@@ -3,4 +3,3 @@ node_modules/
 test.*
 db.sqlite3
 users.sqlite3
-tickets/

@@ -4,8 +4,8 @@
   "description": "A ticket management server",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "jasmine"
+    "test": "./node_modules/jasmine/bin/jasmine.js",
+    "start": "node index.js"
   },
   "author": "Sushant Singh",
   "license": "ISC",
